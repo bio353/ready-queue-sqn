@@ -24,7 +24,6 @@ class FCFS(Queue):
                 process = self.get()
                 print(f"\nProcesso {process['id']} em execução...")
                 self._event.wait(process["burst_time"])
-                # sleep(process["burst_time"])
                 print(f"Processo {process['id']} finalizado!")
 
     def stop(self):
